@@ -1,0 +1,93 @@
+hablar:to speak
+bailar:to dance
+matar:to kill
+ayudar:to help
+crear:to create
+criar:to raise
+criticar:to criticize
+cruzar:to cross
+cultivar:to grow
+dañar(se):to hurt oneself
+dedicar:to dedicate
+dejar:to leave something behind
+dejar de:to stop doing something
+dejar caer:to drop
+desear:to wish
+desayunar:to have breakfast
+descansar:to rest
+desmayarse:to faint
+despegar:to take off(airplane)
+detestar:to detest
+derramar:to spill
+dibujar:to draw
+disfrutar de:to enjoy
+dividir:to divide
+dudar:to doubt
+doblar:to fold
+ducharse:to take shower
+durar:to last
+echar:to throw
+educar:to educate
+empatar:to tie(score)
+empujar:to push
+encantar:to love(to do something)
+enamorarse de:to fall in love
+enfadarse:to become annoyed
+enojarse:to become angry
+enseñar:to teach
+entregar:to turn in
+entrenarse:to train
+entrar:to enter
+enviar:to send
+equivocarse:to be wrong
+escuchar:to listen
+estacionar:to park car
+estornudar:to sneeze
+estudiar:to study
+esperar:to wait/hope
+esquiar:to ski
+estirar:to stretch
+explicar:to explain
+faltar:to lack/need
+felicitar:to congratulate
+fijarse:to par attention
+firmar:to sign
+frenar:to brake
+frotar:to rub
+fumar:to smoke
+funcionar:to work(like TV)
+ganar:to win
+gastar:to spend money
+golpear:to hit
+gozar de:to enjoy
+grabar:to record
+gritar:to yell
+guardar:to keep(stuff)
+gustar:to be pleasing to
+hablar:to talk
+hallar:to find
+hornear:to bake
+importar:to matter
+indicar:to indicate
+intentar:to try
+interesar:to interest
+inventar:to invent
+invitar:to invite
+irritarse:to become irritated
+jalar:to pull
+jurar:to swear(on the bible)
+jubilarse:to retire
+lanzar:to throw
+lastimarse:to hurt/injure
+levantar:to raise
+levantarse:to get up
+lavar:to wash
+llamar:to call
+llegar:to arrive
+llenar:to fill
+llevar:to wear/carry
+limpiar:to clean
+llorar:to cry
+maltratar:to mistreat
+mandar:to send
+
