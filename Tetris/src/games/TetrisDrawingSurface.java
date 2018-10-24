@@ -8,20 +8,16 @@ import processing.core.PApplet;
 public class TetrisDrawingSurface extends PApplet {
 
 	private int board[][] = new int[19][12];
-	private TetrisGamePiece activePiece;
-	private TetrisGamePiece ghostPiece;
-	private TetrisGamePiece nextPiece;
-	private int numRepetition;
-	private int score, level;
-	private boolean activeIntersecting, landed, end;
-	private boolean studying;
-	private boolean paused;
-	private int yDown, linesCleared, correctAnswers;
+	private TetrisGamePiece activePiece, ghostPiece, nextPiece;
+	private int score, level, linesCleared, correctAnswers;
+	private boolean activeIntersecting, landed, end, paused;
+	private int yDown, numRepetition, frequency;
 	private StudySet set;
+	private int levels[] = {15, 25, 35, 45, 55, 65, 75, 85, 100};
 
 	public TetrisDrawingSurface(String fileName) {
 		set = new StudySet(fileName);
-		paused = end = studying = false;
+		paused = end = false;
 		score = 0;
 		level = 1;
 		for (int i = 0; i < 12; i++) {
@@ -31,7 +27,6 @@ public class TetrisDrawingSurface extends PApplet {
 			board[18][i] = 8;
 		}
 		activePiece = new TetrisGamePiece((int) (Math.random() * 7 + 1));
-		//		activePiece = new TetrisGamePiece(6);
 
 		ghostPiece = new TetrisGamePiece(activePiece.getType());
 		ghostPiece.setFill(200);
@@ -44,6 +39,7 @@ public class TetrisDrawingSurface extends PApplet {
 			nextPiece.translateX(1);
 		}
 
+		frequency = 120;
 	}
 
 	public void setup() {
@@ -148,14 +144,14 @@ public class TetrisDrawingSurface extends PApplet {
 				checkFullLine();
 				reset();
 			} 
-			else if (numRepetition == 60) {
+			else if (numRepetition == frequency) {
 				if (activeIntersecting && !landed) {
 					landed = true;
-					numRepetition -= 30;
+					numRepetition -= frequency/2;
 				} else {
 					activePiece.drop(1);
 					ghostPiece.drop(1);
-					numRepetition -= 60;
+					numRepetition -= frequency;
 				}
 
 
@@ -363,7 +359,6 @@ public class TetrisDrawingSurface extends PApplet {
 	}
 
 	private void reset() {
-		//		activePiece = new TetrisGamePiece((int) (Math.random() * 7 + 1));
 		activePiece = new TetrisGamePiece(nextPiece.getType());
 
 		activeIntersecting = false;
@@ -418,6 +413,11 @@ public class TetrisDrawingSurface extends PApplet {
 				linesCleared++;
 				clearLine(i);
 
+				if (level < 10 && linesCleared == levels[level-1]) {
+					level++;
+					frequency *= .8;
+				}
+				
 				int index =(int) (Math.random()*set.size());
 				String answer = (String) JOptionPane.showInputDialog(frame, "Question: " + set.getTermAt(index), "Problem", JOptionPane.PLAIN_MESSAGE, null, null, " ");
 				answer = answer.trim();
@@ -449,7 +449,7 @@ public class TetrisDrawingSurface extends PApplet {
 	}
 	
 	public void restart() {
-		paused = end = studying = false;
+		paused = end = false;
 		score = 0;
 		level = 1;
 		for (int i = 0; i < 12; i++) {
@@ -459,7 +459,6 @@ public class TetrisDrawingSurface extends PApplet {
 			board[18][i] = 8;
 		}
 		activePiece = new TetrisGamePiece((int) (Math.random() * 7 + 1));
-		//		activePiece = new TetrisGamePiece(6);
 
 		ghostPiece = new TetrisGamePiece(activePiece.getType());
 		ghostPiece.setFill(200);

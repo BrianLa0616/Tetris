@@ -90,4 +90,3 @@ limpiar:to clean
 llorar:to cry
 maltratar:to mistreat
 mandar:to send
-
